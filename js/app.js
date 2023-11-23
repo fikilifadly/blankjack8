@@ -295,7 +295,7 @@ startGame();
 
 let name = localStorage.getItem("name");
 let currchips = localStorage.getItem("chips");
-if (!name) {
+if (!name && window.location.href.indexOf("index") > 0) {
   window.location.href = "homepage.html";
 }
 let leaderboard = [
