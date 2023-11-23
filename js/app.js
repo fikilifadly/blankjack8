@@ -194,7 +194,7 @@ const openStartModal = () => {
   });
 
   startModal.show();
-  document.getElementById("new-game-btn").addEventListener("click", () => (window.location.href = "homepage.html"));
+  document.getElementById("new-game-btn").addEventListener("click", () => (window.location.href = "index.html"));
   //   document.getElementById("new-game-btn").addEventListener("click", () => popUpLogin);
 };
 
@@ -274,7 +274,7 @@ const popUpLogin = () => {
   localStorage.setItem("chips", chips);
 
   setTimeout(() => {
-    window.location.href = "homepage.html";
+    window.location.href = "index.html";
   }, 4000);
 };
 
@@ -282,7 +282,7 @@ const startGame = () => {
   buildDeck();
   shuffleDeck();
 
-  if (window.location.href.indexOf("index") > -1) {
+  if (window.location.href.indexOf("board") > -1) {
     document.getElementById("run").addEventListener("click", popUpLogin);
     document.getElementById("hit").addEventListener("click", hit);
     document.getElementById("stand").addEventListener("click", stand);
@@ -295,8 +295,8 @@ startGame();
 
 let name = localStorage.getItem("name");
 let currchips = localStorage.getItem("chips");
-if (!name && window.location.href.indexOf("index") > 0) {
-  window.location.href = "homepage.html";
+if (!name && window.location.href.indexOf("board") > 0) {
+  window.location.href = "index.html";
 }
 let leaderboard = [
   ["Nawaf", 1000],
